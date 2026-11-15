@@ -79,7 +79,7 @@
   ],
   "skills": [
     {"group": "Languages", "items": "Python, C++, TypeScript, Java, MATLAB, SQL"},
-    {"group": "Robotics / Embedded", "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, SolidWorks, Fusion 360, Simulink"},
+    {"group": "Robotics / Embedded", "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, CAD/CAM, SolidWorks, Fusion 360, Simulink"},
     {"group": "ML / AI", "items": "PyTorch, TensorFlow/Keras, scikit-learn, Ultralytics YOLO, pandas, NumPy"},
     {"group": "Cloud / Tools", "items": "AWS (Lambda), GCP, Git, GitHub Actions, Postman, Linux"}
   ]

@@ -52,7 +52,7 @@
     },
     {
       "group": "Robotics and Embedded",
-      "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, SolidWorks, Fusion 360, Simulink"
+      "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, CAD/CAM, SolidWorks, Fusion 360, Simulink"
     },
     {
       "group": "Machine Learning",

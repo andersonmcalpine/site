@@ -312,7 +312,6 @@ def resume_main(site, resume, h):
     <div class="ph-text">
       <p class="eyebrow"><span class="n">Resume</span><span>One page, US Letter</span></p>
       <h1 id="rs-title">{esc(site["name"])}</h1>
-      <p class="ph-lede">The resume as a single page in Jake's Resume layout, the same as the PDF.</p>
       <div class="actions">
         <a class="btn" href="{pre}{esc(site["resume"])}" download>Download PDF</a>
         <button class="btn alt" type="button" onclick="window.print()">Print</button>
