@@ -327,21 +327,6 @@ def sentence(text):
     return m.group(1) if m else text
 
 
-def approach(about):
-    """The first about.md section made of ### items, as (heading, [(title, first sentence)])."""
-    for head, items in about['sections']:
-        rows, title = [], None
-        for kind, value in items:
-            if kind == 'h3':
-                title = value
-            elif kind == 'p' and title:
-                rows.append((title, sentence(value)))
-                title = None
-        if rows:
-            return head, rows
-    return '', []
-
-
 def band_head(num, label, sid, head):
     return (f'    <header class="band-hd cols">\n'
             f'      <p class="eyebrow"><span class="n">{num}</span>{esc(label)}</p>\n'
@@ -410,14 +395,6 @@ def home(site, projects, about, resume):
     facts += f'\n        <div><dt>Email</dt><dd><a href="mailto:{esc(site["email"])}">{esc(site["email"])}</a></dd></div>'
     name = ' '.join(f'<span>{esc(w)}</span>' for w in site['name'].split())
     bar = ''.join(f'\n        <a href="#{k}">{v}</a>' for k, v in BAR)
-    how_head, how = approach(about)
-    how_html = ''.join(f'\n        <li>\n          <h4>{esc(a)}</h4>\n          <p>{inline(b)}</p>\n        </li>' for a, b in how)
-    how_block = f'''
-    <div class="cols how">
-      <h3 class="eyebrow">{esc(how_head)}</h3>
-      <ul class="how-list">{how_html}
-      </ul>
-    </div>''' if how else ''
     word = c.get('lettering', 'Hello')
     main = f'''  <section class="hero" id="top" aria-labelledby="hero-h">
     <div class="hero-text">
@@ -452,7 +429,7 @@ def home(site, projects, about, resume):
         <p class="lead">{inline(sentence(about["lede"]))}</p>
         <a class="link" href="about.html"><span class="u">Full Profile</span> {ARROW}</a>
       </div>
-    </div>{how_block}
+    </div>
   </section>
 
   <section class="band light" id="work" aria-labelledby="work-h">

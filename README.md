@@ -20,7 +20,7 @@ Edit those files only. The pages are rebuilt from them, so changes made directly
 The home page reads top to bottom in plainly labelled bands that alternate light and dark, with a section bar that stays under the header:
 
 - The first screen shows the name, `intro` and the `facts` list from `content/site.json` (each a `label` and a `value`; the email is added at the end), beside a particle field that cycles through every project's shape, five seconds each, with its title and link. Hovering pauses it; the numbers jump to a project and stop the cycle.
-- About uses the title and the first sentence of the lede in `content/about.md`, plus the first section made of `###` items, one sentence each.
+- About uses the title and the first sentence of the lede in `content/about.md`, with a link to the full About page.
 - Work shows one card per project in its colour (see `color` below).
 - Experience and Education form one timeline from `experience` and `education`; Skills lists `skills`; Contact uses `contact`.
 

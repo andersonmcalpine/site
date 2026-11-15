@@ -18,20 +18,6 @@ In analog electronics, a [servo driver](work/servo.html) built from an LM317 reg
 
 The machine learning projects classify [gear faults](work/gear.html) from vibration data alone and estimate [live NBA win probabilities](work/nba.html) from play-by-play data, with a poller and a SwiftUI dashboard for macOS. At BMO Financial Group I connected an internal AI chatbot to customer-profile systems and built serverless AI batch jobs on AWS Lambda.
 
-## Approach
-
-### Simulation Before Hardware
-The arm's Python simulator runs the exact command stream the drives would receive, so every motion can be checked and replayed before it reaches a motor. It models the drives' trajectory planning and is covered by 33 tests.
-
-### Per-Source Evaluation
-Fastener detection is scored per source, not only overall. That exposed a gap between separated parts and clustered ones, and tuning on validation data then raised bin-picking precision from 0.81 to 0.90.
-
-### Continuous Testing
-GitHub Actions runs ruff and pytest on Python 3.11 to 3.13 for every change to the NBA project. The fastener pipeline's regression tests cover rotated-box geometry and matching, and run locally.
-
-### Evidence-Based Model Selection
-For gear faults, five model families were compared on the same vibration windows, from k-nearest neighbours to a 1D convolutional network, before the 1D CNN was chosen. The NBA model is measured against ESPN's: a live Brier score of 0.175 against 0.173 over 45 preseason games.
-
 ## Timeline
 
 - Expected Apr 2028 | Western University | Dual degree in Mechatronic Systems Engineering and AI Systems Engineering, London, Ontario
