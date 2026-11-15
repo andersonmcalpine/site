@@ -156,8 +156,10 @@
       b.addEventListener('click', () => { el.classList.add('held'); show(j); });
       b.addEventListener('animationend', () => { if (!el.classList.contains('held') && !reduced()) show(at + 1); });
     });
+    // Only a mouse pauses on hover: iOS reports a finger that scrolls across the field as
+    // entering it but never as leaving, which used to stop the cycle for good on phones.
     const pause = on => () => el.classList.toggle('paused', on);
-    el.addEventListener('pointerenter', pause(true));
+    el.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') pause(true)(); });
     el.addEventListener('pointerleave', pause(false));
     el.addEventListener('focusin', pause(true));
     el.addEventListener('focusout', pause(false));

@@ -104,7 +104,7 @@ html.light, html.tinted { --page: var(--bg); }
 .light:not(html), .dark:not(html), .tinted:not(html) { background: var(--bg); color: var(--ink); }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { background: var(--page); scroll-behavior: smooth; scroll-padding-top: var(--hd); }
+html { background: var(--page); scroll-behavior: smooth; scroll-padding-top: var(--hd); -webkit-tap-highlight-color: transparent; }
 /* The page colour is on html only, so the particle canvas (z-index -1) shows above it. */
 body {
   margin: 0; color: var(--ink);
@@ -146,7 +146,12 @@ main, .ft { position: relative; }
 .link .ar { display: inline-block; font-size: 0.95em; transition: transform var(--dur-small) var(--ease); }
 .link:hover .ar, .link:focus-visible .ar { transform: translate(2px, -2px); }
 .links { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-6); }
-@media (pointer: coarse) { .link { padding: 12px 0; } }
+@media (pointer: coarse) {
+  .link { padding: 12px 0; }
+  /* Small text links get a 44 px tall touch area without moving anything. */
+  .back, .ft a, .facts a { position: relative; }
+  .back::before, .ft a::before, .facts a::before { content: ""; position: absolute; inset: -12px -6px; }
+}
 
 /* Header: one row, the brand left, links and Menu right, on the page's own colour.
    On case pages it slides away while scrolling down and returns on any scroll up. */
@@ -446,7 +451,8 @@ html.light .ft { --bg: var(--night); --ink: var(--blush); --ink-2: var(--mauve);
 /* The opening field is the first project's link as a whole. */
 /* A field can be a link as a whole: the link covers it, the caption sits low left. */
 .field-link { position: absolute; inset: 0; z-index: 1; }
-.field-link:hover .field-cap .u::after, .field-link:focus-visible .field-cap .u::after { transform: scaleX(1); }
+.field-link:focus-visible .field-cap .u::after { transform: scaleX(1); }
+@media (hover: hover) { .field-link:hover .field-cap .u::after { transform: scaleX(1); } }
 .field-link:focus-visible { outline-offset: -4px; }
 .field-cap { transition: opacity var(--dur-small) var(--ease); }
 .field-cap.swap { opacity: 0; }
