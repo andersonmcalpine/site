@@ -1,0 +1,33 @@
+/* The resume sheet in Jake's Resume layout, one US Letter page: name and contact centred,
+   small-caps section headings over a rule, bold names with places or dates on the right,
+   italic second lines, small bullets. resume.html shows it; tools/resume.py inlines this file
+   to render resume.pdf, so the page and the PDF are the same sheet. Sizes are in points. */
+.jake {
+  box-sizing: border-box; width: 8.5in; max-width: 100%; margin: 0 auto; padding: 0.36in 0.5in;
+  background: #fff; color: #000; text-align: left;
+  font: 400 10.5pt/1.2 "Times New Roman", Times, serif; letter-spacing: 0;
+}
+.jake * { margin: 0; padding: 0; }
+.jake a { color: inherit; text-decoration: underline; text-decoration-thickness: 0.5pt; text-underline-offset: 1.5pt; }
+.jk-head { text-align: center; }
+.jk-name { font-size: 25pt; line-height: 1.1; font-weight: 700; font-variant: small-caps; }
+.jk-contact { margin-top: 3pt; font-size: 10pt; }
+.jake h2 { margin-top: 7pt; padding-bottom: 1.5pt; border-bottom: 0.75pt solid #000; font: 400 13pt/1.1 "Times New Roman", Times, serif; font-variant: small-caps; letter-spacing: 0.02em; }
+.jk-entry { margin-top: 4pt; }
+.jk-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+.jk-row > :last-child { flex: none; text-align: right; }
+.jk-sub { font-size: 10pt; font-style: italic; }
+/* Bullets are a text character, not a drawn dot, so they survive in the PDF's text layer. */
+.jake ul { margin: 2pt 0 0 6pt; list-style: none; font-size: 10pt; }
+.jake li { margin-top: 1.5pt; padding-left: 10pt; text-indent: -10pt; }
+.jake li::before { content: "\2022"; display: inline-block; width: 10pt; text-indent: 0; }
+.jk-note { margin-top: 1.5pt; font-size: 10pt; }
+.jk-skills { margin-top: 4pt; font-size: 10pt; }
+.jk-skills p + p { margin-top: 1.5pt; }
+
+/* On narrow screens the right-hand dates drop under the names. */
+@media screen and (max-width: 600px) {
+  .jake { padding: 24px 20px; }
+  .jk-row { flex-wrap: wrap; gap: 0 12pt; }
+  .jk-row > :last-child { text-align: left; }
+}

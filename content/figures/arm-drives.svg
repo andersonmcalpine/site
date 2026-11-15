@@ -1,0 +1,65 @@
+<svg class="chart" viewBox="0 0 660 234" width="660" height="234" role="img" xmlns="http://www.w3.org/2000/svg">
+<text class="tk" x="20" y="24" text-anchor="start">Node</text>
+<text class="tk" x="66" y="24" text-anchor="start">Motor</text>
+<text class="tk" x="238" y="24" text-anchor="end">Current limit</text>
+<text class="tk" x="328" y="24" text-anchor="end">Resistance</text>
+<text class="tk" x="414" y="24" text-anchor="end">Inductance</text>
+<text class="tk" x="490" y="24" text-anchor="end">Pos gain</text>
+<text class="tk" x="566" y="24" text-anchor="end">Vel gain</text>
+<text class="tk" x="644" y="24" text-anchor="end">Integrator</text>
+<path class="ax" d="M16 34H644"/>
+<text class="nm" x="20" y="55" text-anchor="start">1</text>
+<text class="nm" x="66" y="55" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="55" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="55" text-anchor="end">23.9 mΩ</text>
+<text class="nm" x="414" y="55" text-anchor="end">6.13 µH</text>
+<text class="nm" x="490" y="55" text-anchor="end">2.20</text>
+<text class="nm" x="566" y="55" text-anchor="end">0.0500</text>
+<text class="nm" x="644" y="55" text-anchor="end">0.020</text>
+<path class="gr" d="M16 66H644"/>
+<text class="nm" x="20" y="87" text-anchor="start">2</text>
+<text class="nm" x="66" y="87" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="87" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="87" text-anchor="end">24.0 mΩ</text>
+<text class="nm" x="414" y="87" text-anchor="end">5.96 µH</text>
+<text class="nm" x="490" y="87" text-anchor="end">8.16</text>
+<text class="nm" x="566" y="87" text-anchor="end">0.0296</text>
+<text class="nm" x="644" y="87" text-anchor="end">0.005</text>
+<path class="gr" d="M16 98H644"/>
+<text class="nm" x="20" y="119" text-anchor="start">3</text>
+<text class="nm" x="66" y="119" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="119" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="119" text-anchor="end">23.3 mΩ</text>
+<text class="nm" x="414" y="119" text-anchor="end">7.80 µH</text>
+<text class="nm" x="490" y="119" text-anchor="end">8.16</text>
+<text class="nm" x="566" y="119" text-anchor="end">0.0385</text>
+<text class="nm" x="644" y="119" text-anchor="end">0.020</text>
+<path class="gr" d="M16 130H644"/>
+<text class="nm" x="20" y="151" text-anchor="start">4</text>
+<text class="nm" x="66" y="151" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="151" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="151" text-anchor="end">44.5 mΩ</text>
+<text class="nm" x="414" y="151" text-anchor="end">4.31 µH</text>
+<text class="nm" x="490" y="151" text-anchor="end">6.28</text>
+<text class="nm" x="566" y="151" text-anchor="end">0.0186</text>
+<text class="nm" x="644" y="151" text-anchor="end">0.040</text>
+<path class="gr" d="M16 162H644"/>
+<text class="nm" x="20" y="183" text-anchor="start">5</text>
+<text class="nm" x="66" y="183" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="183" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="183" text-anchor="end">43.6 mΩ</text>
+<text class="nm" x="414" y="183" text-anchor="end">5.51 µH</text>
+<text class="nm" x="490" y="183" text-anchor="end">4.83</text>
+<text class="nm" x="566" y="183" text-anchor="end">0.0143</text>
+<text class="nm" x="644" y="183" text-anchor="end">0.010</text>
+<path class="gr" d="M16 194H644"/>
+<text class="nm" x="20" y="215" text-anchor="start">6</text>
+<text class="nm" x="66" y="215" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="215" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="215" text-anchor="end">43.9 mΩ</text>
+<text class="nm" x="414" y="215" text-anchor="end">5.51 µH</text>
+<text class="nm" x="490" y="215" text-anchor="end">4.83</text>
+<text class="nm" x="566" y="215" text-anchor="end">0.0143</text>
+<text class="nm" x="644" y="215" text-anchor="end">0.010</text>
+<path class="gr" d="M16 226H644"/>
+</svg>

@@ -1,0 +1,7 @@
+{
+ "source": "Measured values from the PWM Output table of the MSE 2201 Project Report (December 7, 2025), read off the oscilloscope traces in its Figures 3 and 4. The report gives no pulse amplitude, so the chart shows the logic level only.",
+ "cases": [
+  {"name": "Minimum duty", "freq_Hz": 56.6, "pulse_ms": 0.40, "duty": "2.3 ± 0.32%"},
+  {"name": "Maximum duty", "freq_Hz": 55.7, "pulse_ms": 2.50, "duty": "13.9 ± 0.31%"}
+ ]
+}

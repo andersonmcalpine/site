@@ -1,0 +1,66 @@
+<svg class="chart" viewBox="0 0 660 370" width="660" height="370" role="img" xmlns="http://www.w3.org/2000/svg">
+<path class="s1" d="M27.5 50H100M180 50H626V125M72 50V170M60 170h24M60 178h24M72 178V330M140 90V130H200M200 50V66M200 66L206 69.3L194 76.0L206 82.7L194 89.3L206 96.0L194 102.7L200 106M200 106V146M200 146L206 149.3L194 156.0L206 162.7L194 169.3L206 176.0L194 182.7L200 186M200 186V330M258 50V170M246 170h24M246 178h24M258 178V330M350 50V66M350 66L356 69.3L344 76.0L356 82.7L344 89.3L356 96.0L344 102.7L350 106M350 106V120M350 120L356 125.0L344 135.0L356 145.0L344 155.0L356 165.0L344 175.0L350 180M350 180V196M350 196L356 199.3L344 206.0L356 212.7L344 219.3L356 226.0L344 232.7L350 236M350 236V280M338 280h24M338 288h24M350 288V330M350 260H445V180H470M445 210H470M362 150H470M385 150V195M377 195H393L385 211ZM377 211H393M385 211V260M495 50V120M545 50V120M495 240V270M483 270h24M483 278h24M495 278V330M545 240V330M570 150H600M626 175V330M72 330H626M72 330V342M60 342h24M65 347h14M70 352h4"/>
+<circle class="s1" cx="24" cy="50" r="3.5"/>
+<rect class="s1" x="100" y="34" width="80" height="56"/>
+<rect class="s1" x="470" y="120" width="100" height="120"/>
+<rect class="s1" x="600" y="125" width="52" height="50"/>
+<path class="pt" d="M357 150l8 -4v8z"/>
+<circle class="pt" cx="72" cy="50" r="2.5"/>
+<circle class="pt" cx="200" cy="50" r="2.5"/>
+<circle class="pt" cx="258" cy="50" r="2.5"/>
+<circle class="pt" cx="350" cy="50" r="2.5"/>
+<circle class="pt" cx="495" cy="50" r="2.5"/>
+<circle class="pt" cx="545" cy="50" r="2.5"/>
+<circle class="pt" cx="200" cy="130" r="2.5"/>
+<circle class="pt" cx="385" cy="150" r="2.5"/>
+<circle class="pt" cx="350" cy="260" r="2.5"/>
+<circle class="pt" cx="385" cy="260" r="2.5"/>
+<circle class="pt" cx="445" cy="210" r="2.5"/>
+<circle class="pt" cx="72" cy="330" r="2.5"/>
+<circle class="pt" cx="200" cy="330" r="2.5"/>
+<circle class="pt" cx="258" cy="330" r="2.5"/>
+<circle class="pt" cx="350" cy="330" r="2.5"/>
+<circle class="pt" cx="495" cy="330" r="2.5"/>
+<circle class="pt" cx="545" cy="330" r="2.5"/>
+<text class="nm" x="24" y="36" text-anchor="middle">9 V</text>
+<text class="nm" x="140" y="27" text-anchor="middle">LM317T</text>
+<text class="tk" x="106" y="54" text-anchor="start">IN</text>
+<text class="tk" x="174" y="54" text-anchor="end">OUT</text>
+<text class="tk" x="140" y="84" text-anchor="middle">ADJ</text>
+<text class="tk" x="90" y="178" text-anchor="start">100 nF</text>
+<text class="nm" x="208" y="82" text-anchor="start">RA</text>
+<text class="tk" x="208" y="96" text-anchor="start">1 kΩ</text>
+<text class="nm" x="208" y="162" text-anchor="start">RB</text>
+<text class="tk" x="208" y="176" text-anchor="start">3.3 kΩ</text>
+<text class="tk" x="276" y="178" text-anchor="start">100 nF</text>
+<text class="nm" x="304" y="42" text-anchor="middle">VCC</text>
+<text class="nm" x="338" y="82" text-anchor="end">R1</text>
+<text class="tk" x="338" y="96" text-anchor="end">2.2 kΩ</text>
+<text class="nm" x="338" y="146" text-anchor="end">Pot</text>
+<text class="tk" x="338" y="160" text-anchor="end">10 kΩ</text>
+<text class="nm" x="338" y="212" text-anchor="end">R2</text>
+<text class="tk" x="338" y="226" text-anchor="end">100 kΩ</text>
+<text class="nm" x="332" y="284" text-anchor="end">C</text>
+<text class="tk" x="332" y="298" text-anchor="end">220 nF</text>
+<text class="nm" x="397" y="200" text-anchor="start">D</text>
+<text class="tk" x="397" y="214" text-anchor="start">1N4148</text>
+<text class="nm" x="520" y="112" text-anchor="middle">NE555</text>
+<text class="tk" x="476" y="154" text-anchor="start">DIS</text>
+<text class="tk" x="476" y="184" text-anchor="start">THR</text>
+<text class="tk" x="476" y="214" text-anchor="start">TRIG</text>
+<text class="tk" x="495" y="136" text-anchor="middle">VCC</text>
+<text class="tk" x="545" y="136" text-anchor="middle">RST</text>
+<text class="tk" x="495" y="232" text-anchor="middle">CTRL</text>
+<text class="tk" x="545" y="232" text-anchor="middle">GND</text>
+<text class="tk" x="564" y="154" text-anchor="end">OUT</text>
+<text class="tk" x="458" y="146" text-anchor="middle">7</text>
+<text class="tk" x="458" y="176" text-anchor="middle">6</text>
+<text class="tk" x="458" y="206" text-anchor="middle">2</text>
+<text class="tk" x="490" y="114" text-anchor="end">8</text>
+<text class="tk" x="550" y="114" text-anchor="start">4</text>
+<text class="tk" x="490" y="254" text-anchor="end">5</text>
+<text class="tk" x="550" y="254" text-anchor="start">1</text>
+<text class="tk" x="585" y="146" text-anchor="middle">3</text>
+<text class="tk" x="479" y="278" text-anchor="end">22 nF</text>
+<text class="nm" x="626" y="154" text-anchor="middle">Servo</text>
+</svg>

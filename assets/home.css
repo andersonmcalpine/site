@@ -1,0 +1,76 @@
+/* Home page: the name and facts beside the first project's particles, a section bar held
+   under the header, then the shared bands (site.css): About, Work, Experience, Skills, Contact. */
+
+.home {
+  --bar: 48px;
+  scroll-padding-top: calc(var(--hd) + var(--bar));
+}
+.home main [id] { scroll-margin-top: calc(var(--hd) + var(--bar)); }
+
+/* Opening screen */
+.hero {
+  display: grid; grid-template-columns: minmax(0, 54fr) minmax(0, 46fr);
+  min-height: calc(100vh - var(--bar)); min-height: calc(100svh - var(--bar));
+  padding-top: var(--hd); border-bottom: 1px solid var(--rule);
+}
+.hero-text { display: flex; flex-direction: column; justify-content: center; padding: clamp(40px, 6vh, 72px) clamp(32px, 4.5vw, 72px) clamp(40px, 6vh, 72px) var(--edge); }
+.hero h1 { font-size: clamp(40px, 5.4vw, 80px); line-height: 1.04; font-weight: 500; letter-spacing: -0.03em; }
+.hero h1 span { white-space: nowrap; }
+.hero-role { margin-top: var(--sp-5); max-width: 30em; font-family: var(--font-text); font-size: clamp(18px, 1.5vw, 21px); line-height: 1.45; color: var(--ink-2); }
+.facts { margin-top: clamp(28px, 4.5vh, 44px); max-width: 40rem; border-bottom: 1px solid var(--rule); }
+.facts div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: var(--sp-4); padding: 11px 0; border-top: 1px solid var(--rule); }
+.facts dt { font-size: var(--t-caps); line-height: 1.9; letter-spacing: var(--caps); text-transform: uppercase; font-weight: 500; color: var(--ink-2); }
+.facts dd { font: 400 var(--t-ui)/1.55 var(--font-text); overflow-wrap: anywhere; }
+.facts a { border-bottom: 1px solid var(--line); transition: border-color var(--dur-small) var(--ease); }
+.facts a:hover { border-color: var(--ink); }
+
+.hero .field { min-height: 440px; }
+
+/* Section bar: in flow under the opening screen, then held under the header */
+.bar { position: sticky; top: var(--hd); z-index: 9; background: var(--page); border-bottom: 1px solid var(--rule); }
+.bar-in { overflow-x: auto; scrollbar-width: none; padding: 0 var(--edge); }
+.bar-in::-webkit-scrollbar { display: none; }
+.bar-list { position: relative; display: flex; gap: var(--sp-6); width: max-content; height: var(--bar); }
+.bar-list a { display: flex; align-items: center; font-size: var(--t-caps); letter-spacing: var(--caps); text-transform: uppercase; line-height: 1; font-weight: 500; color: var(--ink-2); white-space: nowrap; transition: color var(--dur-small) var(--ease); }
+.bar-list a:hover, .bar-list a[aria-current] { color: var(--ink); }
+.bar-list a:focus-visible { outline-offset: -4px; }
+.bar-ind { position: absolute; left: 0; bottom: 0; width: 0; height: 2px; background: var(--ink); opacity: 0; pointer-events: none; transition: transform 380ms var(--ease), width 380ms var(--ease), opacity var(--dur-small); }
+.bar-ind.on { opacity: 1; }
+
+/* About */
+.about { margin-inline: var(--edge); }
+.about-main { grid-column: 2; }
+.about .link { margin-top: var(--sp-5); }
+
+/* Work: the project cards (site.css), on the label axis */
+#work .cards { margin-inline: var(--edge); }
+
+/* Contact */
+#contact > .cols { margin-inline: var(--edge); }
+.reach { grid-column: 2; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--gap); align-items: stretch; }
+.reach-note { max-width: 32em; font: 400 var(--t-body)/1.6 var(--font-text); color: var(--ink-2); }
+.reach .email { margin-top: var(--sp-5); font-size: clamp(28px, 3.4vw, 50px); line-height: 1.12; letter-spacing: -0.02em; overflow-wrap: anywhere; }
+.reach .links { margin-top: 28px; }
+.hello { min-height: clamp(200px, 20vw, 300px); }
+.hello .field-word { font-size: clamp(64px, 8vw, 128px); }
+
+/* Tablet: the opening screen stacks, the field follows the text */
+@media (max-width: 899px) {
+  .hero { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .hero-text { padding: 48px var(--edge) 56px; }
+  .hero .field { min-height: 0; height: clamp(300px, 64vw, 460px); }
+  .reach { grid-template-columns: minmax(0, 1fr); }
+  .hello { order: -1; margin-bottom: var(--sp-2); }
+}
+
+/* Phone: one column; labels sit above their content */
+@media (max-width: 719px) {
+  .about-main, .reach { grid-column: 1; }
+  .facts div { grid-template-columns: 5.5rem minmax(0, 1fr); gap: var(--sp-3); }
+  .hello { min-height: 180px; }
+}
+
+/* Reduced motion: fades only, no scroll-driven rail */
+@media (prefers-reduced-motion: reduce) {
+  .bar-ind { transition: opacity var(--dur-small); }
+}

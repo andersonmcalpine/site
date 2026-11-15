@@ -1,0 +1,71 @@
+{
+  "name": "Anderson McAlpine",
+  "url": "https://andersonmcalpine.github.io/",
+  "title": "Anderson McAlpine | Robotics and AI Engineering",
+  "description": "Anderson McAlpine, mechatronics and AI engineering student at Western University: robotics, embedded control, computer vision and machine learning projects.",
+  "intro": "Engineering student focused on robotics, embedded control, computer vision and machine learning.",
+  "about": "Mechatronic Systems and AI Systems Engineering student at Western University, based in Toronto. Seeking robotics and embedded systems internships from May 2027.",
+  "facts": [
+    {
+      "label": "Program",
+      "value": "Mechatronic Systems Engineering and AI Systems Engineering, dual degree"
+    },
+    {
+      "label": "University",
+      "value": "Western University, expected April 2028"
+    },
+    {
+      "label": "Location",
+      "value": "Toronto, Ontario"
+    }
+  ],
+  "location": "Toronto",
+  "email": "anderson.mcalpine@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/anderson-mcalpine-620898380",
+  "resume": "resume.pdf",
+  "experience": [
+    {
+      "dates": "May–Aug 2026",
+      "title": "AI Developer Intern",
+      "org": "BMO Financial Group, Toronto",
+      "text": "Connected an internal AI chatbot to customer-profile systems, built serverless AI batch jobs on AWS Lambda in TypeScript and Python, and tested API contracts with Postman."
+    },
+    {
+      "dates": "Apr–Aug 2025",
+      "title": "Analyst",
+      "org": "Cushman & Wakefield, Toronto",
+      "text": "Analysed commercial property performance and prepared market reports for senior analysts."
+    }
+  ],
+  "education": [
+    {
+      "dates": "Expected Apr 2028",
+      "title": "Western University",
+      "org": "London, Ontario",
+      "text": "Dual degree in Mechatronic Systems Engineering and AI Systems Engineering. Courses include control systems, kinematics and dynamics of machines, electric motors and drives, digital logic, signal processing and deep learning for time series."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": "Python, C++, TypeScript, Java, MATLAB, SQL"
+    },
+    {
+      "group": "Robotics and Embedded",
+      "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, SolidWorks, Fusion 360, Simulink"
+    },
+    {
+      "group": "Machine Learning",
+      "items": "PyTorch, TensorFlow and Keras, scikit-learn, Ultralytics YOLO, pandas, NumPy"
+    },
+    {
+      "group": "Cloud and Tools",
+      "items": "AWS Lambda, GCP, Git, GitHub Actions, Postman, Linux"
+    }
+  ],
+  "contact": {
+    "heading": "Get in Touch",
+    "note": "Seeking robotics and embedded systems internships from May 2027.",
+    "lettering": "Hello"
+  }
+}

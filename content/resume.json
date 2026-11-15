@@ -1,0 +1,86 @@
+{
+  "contact": {
+    "location": "Toronto, ON",
+    "linkedin_label": "linkedin.com/in/anderson-mcalpine-620898380"
+  },
+  "education": [
+    {
+      "school": "Western University",
+      "place": "London, ON",
+      "degree": "Dual Bachelor of Engineering Science: Mechatronic Systems Engineering & AI Systems Engineering",
+      "dates": "Expected April 2028",
+      "note": "Relevant Coursework: Control Systems, Kinematics & Dynamics of Machines, Electric Motors & Drives, Digital Logic Systems, Digital Signal Processing, Deep Learning for Time Series"
+    }
+  ],
+  "experience": [
+    {
+      "title": "AI Developer Intern",
+      "dates": "May 2026 – Aug 2026",
+      "org": "BMO Financial Group",
+      "place": "Toronto, ON",
+      "points": [
+        "Integrated an internal AI chatbot with customer-profile systems on the EDF team, giving branch employees conversational access to client banking information",
+        "Developed serverless AI batch jobs on AWS Lambda (TypeScript, Python) that process banking data into customer profiles used by branch staff",
+        "Tested service integrations and API contracts with Postman and Python scripts; performed QA across chatbot and batch workflows before release"
+      ]
+    },
+    {
+      "title": "Analyst",
+      "dates": "Apr 2025 – Aug 2025",
+      "org": "Cushman & Wakefield ULC",
+      "place": "Toronto, ON",
+      "points": [
+        "Analyzed commercial property performance metrics in Excel and data-visualization tools to support client recommendations",
+        "Prepared market intelligence reports for senior analysts evaluating commercial real estate portfolios"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "6-DOF Robotic Arm",
+      "tech": "C, Python, STM32, CAN, ODrive",
+      "dates": "Ongoing",
+      "points": [
+        "Brought up six ODESC v4.2 drives: backed up and flashed ODrive 0.5.6 firmware, calibrated three REV NEO and three NEO 550 motors with hall sensors, and tuned each joint's cascaded position/velocity loops",
+        "Wired the drives as six nodes on a 500 kbit/s CAN bus bridged from an STM32 Nucleo-F446RE (C firmware, TJA1050 transceiver); traced a node-ID conflict and drove all six motors from Python test tools",
+        "Wrote a Python simulator that runs the exact command stream sent to the drives, modelling their trajectory planning, covered by 33 tests",
+        "Next: STM32 and Raspberry Pi control software once the arm is printed (teammate's CAD and 55:1 planetary gearbox), and a ROS 2 port of the simulator"
+      ]
+    },
+    {
+      "name": "Fastener Recognition for Robotic Bin Picking",
+      "tech": "Python, PyTorch, YOLO11-OBB",
+      "dates": "2026",
+      "points": [
+        "Built a reproducible CV pipeline detecting screws, bolts and nuts with oriented bounding boxes (YOLO11n-OBB), merging 4 public datasets with validated class mappings",
+        "Designed source-stratified evaluation that exposed a clean-to-cluttered domain gap; error analysis plus NMS/confidence tuning raised bin-picking precision 0.81 → 0.90",
+        "Added GitHub Actions CI (Windows/Linux) and regression tests; targeting Raspberry Pi 5 edge deployment"
+      ]
+    },
+    {
+      "name": "Gear Fault Classification from Vibration Data",
+      "tech": "Python, ML",
+      "dates": "2025",
+      "points": [
+        "Built an ML pipeline classifying six gear conditions from vibration time-series data using windowing and feature engineering",
+        "Compared five model families and several activation functions, reaching up to 97.7% test accuracy for predictive maintenance"
+      ]
+    },
+    {
+      "name": "NBA Live Win Probability",
+      "tech": "Python, SwiftUI",
+      "dates": "Ongoing",
+      "points": [
+        "Built win-probability models from NBA play-by-play, turning each game into possessions and game-state features",
+        "Runs a live poller that follows games as they happen, a scorecard that checks every prediction, and a SwiftUI dashboard for macOS",
+        "Reached a live Brier score of 0.175 over 45 preseason games in October 2026, against ESPN's 0.173"
+      ]
+    }
+  ],
+  "skills": [
+    {"group": "Languages", "items": "Python, C++, TypeScript, Java, MATLAB, SQL"},
+    {"group": "Robotics / Embedded", "items": "STM32, ESP32, Arduino, ODrive BLDC control, PID, SolidWorks, Fusion 360, Simulink"},
+    {"group": "ML / AI", "items": "PyTorch, TensorFlow/Keras, scikit-learn, Ultralytics YOLO, pandas, NumPy"},
+    {"group": "Cloud / Tools", "items": "AWS (Lambda), GCP, Git, GitHub Actions, Postman, Linux"}
+  ]
+}

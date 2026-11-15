@@ -1,0 +1,24 @@
+<svg class="chart" viewBox="0 0 660 230" width="660" height="230" role="img" xmlns="http://www.w3.org/2000/svg">
+<path class="gr" d="M315.0 12.0V180.0 M410.0 12.0V180.0 M505.0 12.0V180.0 M600.0 12.0V180.0"/>
+<path class="ax" d="M220.0 8.0V180.0H604.0"/>
+<text class="tk" x="220.0" y="197.0" text-anchor="middle">0</text>
+<text class="tk" x="315.0" y="197.0" text-anchor="middle">25</text>
+<text class="tk" x="410.0" y="197.0" text-anchor="middle">50</text>
+<text class="tk" x="505.0" y="197.0" text-anchor="middle">75</text>
+<text class="tk" x="600.0" y="197.0" text-anchor="middle">100</text>
+<text class="lb" x="410.0" y="218.0" text-anchor="middle">Success rate (%)</text>
+<rect class="pt" x="220.0" y="31.0" width="342.0" height="18"/>
+<text class="nm" x="208.0" y="38.0" text-anchor="end">Sorting accuracy</text>
+<text class="tk" x="208.0" y="53.0" text-anchor="end">9 of 10 erasers, each of 3 trials</text>
+<text class="nm" x="570.0" y="44.0">90%, pass</text>
+<rect class="pt" x="220.0" y="87.0" width="342.0" height="18"/>
+<text class="nm" x="208.0" y="94.0" text-anchor="end">Integrated collection</text>
+<text class="tk" x="208.0" y="109.0" text-anchor="end">3 trials while driving</text>
+<text class="nm" x="570.0" y="100.0">90%, pass</text>
+<rect class="s1" x="220.0" y="143.0" width="190.0" height="18"/>
+<text class="nm" x="208.0" y="150.0" text-anchor="end">Return to base</text>
+<text class="tk" x="208.0" y="165.0" text-anchor="end">varied starting positions</text>
+<text class="nm" x="418.0" y="156.0">50%, fail</text>
+<path class="s2" d="M486.0 138.0V166.0"/>
+<text class="tk" x="486.0" y="132.0" text-anchor="middle">Target 70%</text>
+</svg>

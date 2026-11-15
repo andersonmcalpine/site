@@ -1,0 +1,8 @@
+{
+ "source": "Product Validation table and text of the MSE 2202B Final Report, Lab 004 Team 3 (April 9, 2026), pages 25 to 27. Sorting and collection had pass criteria but no numeric target; return to base had a 70% target. The terrain test (pass over floor bumps) has no rate and is left out of the chart.",
+ "rows": [
+  {"name": "Sorting accuracy", "detail": "9 of 10 erasers, each of 3 trials", "result": 90, "target": null, "status": "Pass"},
+  {"name": "Integrated collection", "detail": "3 trials while driving", "result": 90, "target": null, "status": "Pass"},
+  {"name": "Return to base", "detail": "varied starting positions", "result": 50, "target": 70, "status": "Fail"}
+ ]
+}

@@ -1,0 +1,6 @@
+{
+ "source": "Component values read from Figures 1 and 2 and the parts list of the MSE 2201 Project Report (December 7, 2025): Figure 1 is the LM317T regulator, Figure 2 the NE555 pulse generator.",
+ "supply": "9 V",
+ "regulator": {"ic": "LM317T", "RA": "1 kΩ", "RB": "3.3 kΩ", "Cin": "100 nF", "Cout": "100 nF"},
+ "timer": {"ic": "NE555", "R1": "2.2 kΩ", "pot": "10 kΩ", "R2": "100 kΩ", "C": "220 nF", "Ccont": "22 nF", "D": "1N4148"}
+}

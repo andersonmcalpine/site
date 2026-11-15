@@ -1,0 +1,144 @@
+/* Navigation: the header Menu button, the full-screen menu, the case-study project
+   switcher and anchor offsets. Tokens come from site.css; nav.js builds the DOM. */
+
+/* Anchors land below the fixed header. */
+main [id] { scroll-margin-top: calc(var(--hd) + var(--sp-5)); }
+
+/* Header: Menu is a quiet text control in line with the links, with a two-line mark */
+.menu-btn, .mn-close {
+  position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 1px 0;
+  border: 0; background: none; color: var(--ink); font: 500 var(--t-caps)/1.45 var(--font); letter-spacing: var(--caps); text-transform: uppercase;
+  white-space: nowrap; cursor: pointer;
+}
+.menu-btn::after, .mn-close::after { content: ""; width: 18px; height: 7px; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; transition: transform var(--dur-small) var(--ease); }
+.mn-close::after { display: none; }
+.menu-btn:hover::after { transform: scaleX(0.75); }
+.menu-btn:hover, .mn-close:hover { color: var(--accent); }
+html:not(.js) .menu-btn { display: none; }
+
+@media (max-width: 899px) {
+  /* Phones: the links fold into the menu. Without JS there is no menu, so they stay. */
+  .js .hd-links { display: none; }
+}
+
+/* Menu panel */
+html.mn-lock { overflow: hidden; scrollbar-gutter: stable; background: var(--night); }
+.mn {
+  --mn-exit: calc(var(--dur-small) * 0.75);
+  --mn-col: clamp(40px, 4.5vw, 72px);
+  position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column;
+  background: var(--night); color: var(--blush);
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity var(--mn-exit) var(--ease), visibility 0s linear var(--mn-exit);
+}
+.mn[data-state="open"] {
+  opacity: 1; visibility: visible; pointer-events: auto;
+  transition: opacity var(--dur-small) var(--ease);
+}
+
+/* Top bar mirrors .hd-bar, so Close sits where Menu was. */
+.mn-top.wrap { flex: none; margin: 0; padding: 0 var(--edge); }
+.mn-bar { display: flex; align-items: center; justify-content: space-between; height: var(--hd); }
+.mn-brand { display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-1) 0; color: var(--ink); }
+.mn-brand::before { content: ""; width: 10px; height: 10px; background: var(--gold); }
+.mn-brand span { font-size: 16px; line-height: 1; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+
+.mn-body { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain; }
+.mn-grid { margin-top: auto; padding: var(--sp-7) 0; row-gap: var(--sp-6); align-items: end; }
+.mn-nav { grid-column: 1 / span 8; }
+.mn-side { grid-column: 9 / span 4; padding-bottom: var(--sp-2); }
+
+/* Index list: a number column, then the label */
+.mn-list li { display: grid; justify-items: start; }
+.mn-link {
+  display: grid; grid-template-columns: var(--mn-col) auto; align-items: baseline; max-width: 100%;
+  padding: var(--sp-1) 0;
+  font-size: min(clamp(34px, 4.6vw, 76px), 8.5vh); line-height: 1.05; font-weight: 500; letter-spacing: -0.04em;
+}
+.mn-sub { justify-self: stretch; margin: var(--sp-2) 0 var(--sp-4) var(--mn-col); }
+.mn-sublink {
+  display: grid; grid-template-columns: 40px auto; align-items: baseline; align-content: center; max-width: 100%;
+  padding: var(--sp-2) 0; font-size: var(--t-h3); line-height: 1.35; font-weight: 500; letter-spacing: 0;
+}
+.mn-num { font-size: var(--t-label); font-weight: 500; line-height: 1; letter-spacing: 0; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.mn-label { color: var(--blush); text-wrap: balance; transition: color var(--dur-micro) var(--ease); }
+.mn-link:hover .mn-label, .mn-link:focus-visible .mn-label,
+.mn-sublink:hover .mn-label, .mn-sublink:focus-visible .mn-label { color: var(--gold); }
+/* Current page or section: a gold number and an underline, so it never relies on colour alone. */
+.mn-link[aria-current] .mn-num, .mn-sublink[aria-current] .mn-num { color: var(--gold); }
+.mn-link[aria-current] .mn-label, .mn-sublink[aria-current] .mn-label {
+  text-decoration: underline var(--gold); text-decoration-thickness: max(2px, 0.05em); text-underline-offset: 0.16em;
+}
+
+/* Details: availability, quick actions and the case-page key hint */
+.mn-note { max-width: 24em; font: 400 var(--t-ui)/1.6 var(--font-text); letter-spacing: 0; color: var(--ink-2); }
+.mn-side .actions { margin-top: var(--sp-5); }
+.mn-hint { margin-top: var(--sp-5); font: 400 var(--t-label)/1.6 var(--font-text); color: var(--ink-2); }
+@media (hover: none) { .mn-hint { display: none; } }
+
+/* Opening: items rise in sequence. Closing: they hold still while the panel fades. */
+.mn-rise { opacity: 0; transform: translate3d(0, 16px, 0); }
+.mn[data-state="open"] .mn-rise {
+  opacity: 1; transform: none;
+  transition: opacity var(--dur-medium) var(--ease-in), transform var(--dur-medium) var(--ease-in);
+  transition-delay: calc(var(--i, 0) * 35ms);
+}
+.mn[data-state="closing"] .mn-rise { opacity: 1; transform: none; }
+
+@media (max-width: 899px) {
+  .mn-nav, .mn-side { grid-column: 1 / -1; }
+  .mn-grid { padding: var(--sp-6) 0 var(--sp-7); }
+  .mn-side { padding-top: var(--sp-5); border-top: 1px solid var(--rule); }
+}
+
+/* Project switcher on case pages */
+.sw { display: none; }
+@media (min-width: 900px) {
+  .sw {
+    position: fixed; right: var(--edge); bottom: var(--sp-5); z-index: 9;
+    display: flex; align-items: center; height: 48px; padding: 0 var(--sp-1);
+    border: 1px solid var(--line); border-radius: 2px; background: var(--night);
+    color: var(--blush); font: 500 var(--t-ui)/1 var(--font); font-variant-numeric: tabular-nums;
+    transition: opacity var(--dur-small) var(--ease), transform var(--dur-small) var(--ease);
+  }
+  .sw.away {
+    opacity: 0; transform: translate3d(0, 8px, 0); visibility: hidden; pointer-events: none;
+    transition: opacity var(--dur-small) var(--ease), transform var(--dur-small) var(--ease), visibility 0s linear var(--dur-small);
+  }
+}
+.sw-btn {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: var(--blush);
+  transition: background-color var(--dur-micro) var(--ease), color var(--dur-micro) var(--ease);
+}
+.sw-btn:hover { background: var(--indigo-2); color: var(--gold); }
+.sw-btn:focus-visible { border-radius: 50%; outline-offset: 2px; }
+.sw-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.sw-count { min-width: 4.75em; padding: 0 var(--sp-2); text-align: center; white-space: nowrap; }
+.sw-of { color: var(--ink-2); }
+
+.mn-sr {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* Leaving a page with the menu open: no shared-element morphs, only the cross-fade. */
+.mn-swap * { view-transition-name: none !important; }
+
+/* Touch: every target at least 44 px */
+@media (pointer: coarse) {
+  .menu-btn, .mn-close { min-height: 44px; }
+  .hd-links a { padding-block: 10px; }
+  .brand, .mn-brand { padding-block: 11px; }
+  .mn-link, .mn-sublink { min-height: 44px; align-content: center; }
+  .sw-btn { width: 44px; height: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mn[data-state] .mn-rise { opacity: 1; transform: none; transition: none; }
+  .menu-btn::after { transition: none; }
+  .sw.away { transform: none; }
+}
+
+@media print {
+  .menu-btn, .mn, .sw { display: none !important; }
+}

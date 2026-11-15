@@ -1,0 +1,25 @@
+/* About, Resume and 404: what they add to the page head (.ph) and the bands in site.css.
+   Spacing uses --sp-1 to --sp-8 (4 to 64 px); labels use the small spaced capitals. */
+
+/* About: an optional photo fills the field beside the page head. */
+.ph-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* 404: the page head alone, tall enough to hold the screen. */
+.nf { min-height: 72vh; }
+
+/* Resume: a short page head, then the sheet (assets/jake.css) on a light band. Printing prints
+   the sheet alone, edge to edge on Letter, exactly as resume.pdf. */
+.rs-paper { padding-block: clamp(32px, 5vw, 72px); }
+.paper-wrap { margin-inline: var(--edge); }
+.paper-wrap .jake { border: 1px solid var(--line); }
+
+@media print {
+  @page { size: letter; margin: 0; }
+  html, body { background: #fff !important; }
+  .hd, .cloud, .mn, .sw, .ft, .skip, .rs-head { display: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  .rs-paper { padding: 0 !important; background: #fff !important; }
+  .paper-wrap { margin: 0; }
+  .paper-wrap .jake { border: 0; }
+}

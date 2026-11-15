@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" class="tinted theme-sage">
+<head>
+<!-- Built from content/ by build.py. Edit the content, then run python3 build.py. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Fastener Recognition | Anderson McAlpine</title>
+<meta name="description" content="Rotated-box detection of screws, bolts and nuts for robotic bin picking, evaluated separately for each image source.">
+<meta name="theme-color" content="#8EA48A">
+<link rel="canonical" href="https://andersonmcalpine.github.io/work/fastener.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anderson McAlpine">
+<meta property="og:title" content="Fastener Recognition | Anderson McAlpine">
+<meta property="og:description" content="Rotated-box detection of screws, bolts and nuts for robotic bin picking, evaluated separately for each image source.">
+<meta property="og:url" content="https://andersonmcalpine.github.io/work/fastener.html">
+<meta property="og:image" content="https://andersonmcalpine.github.io/images/og/fastener.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=2e69f2cb">
+<link rel="stylesheet" href="../assets/nav.css?v=917d57b8">
+<link rel="stylesheet" href="../assets/pages.css?v=75e72bad">
+<link rel="stylesheet" href="../assets/demos.css?v=592c1fa5">
+<script src="../assets/cloud.js?v=2937656a" defer></script>
+<script src="../assets/site.js?v=8ba3c498" defer></script>
+<script src="../assets/nav.js?v=1912d596" defer></script>
+<script src="../assets/demos.js?v=9a4acbda" defer></script>
+<script type="application/json" id="site-data">{"projects": [{"id": "arm", "title": "6-DOF Robotic Arm", "num": "01"}, {"id": "sorter", "title": "Autonomous Sorting Robot", "num": "02"}, {"id": "fastener", "title": "Fastener Recognition", "num": "03"}, {"id": "gear", "title": "Gear Fault Classification", "num": "04"}, {"id": "nba", "title": "NBA Live Win Probability", "num": "05"}, {"id": "servo", "title": "Servo Driver", "num": "06"}], "sections": [{"id": "top", "label": "Home"}, {"id": "work", "label": "Work"}, {"id": "about", "label": "About", "page": "about.html"}, {"id": "experience", "label": "Experience and Education"}, {"id": "skills", "label": "Skills"}, {"id": "contact", "label": "Contact"}, {"id": "resume", "label": "Resume", "page": "resume.html"}], "email": "anderson.mcalpine@gmail.com", "linkedin": "https://www.linkedin.com/in/anderson-mcalpine-620898380", "resume": "resume.pdf", "curve": [[0.0, 0.253], [0.006, 0.253], [0.013, 0.268], [0.019, 0.269], [0.025, 0.3], [0.031, 0.272], [0.037, 0.272], [0.044, 0.273], [0.05, 0.275], [0.056, 0.261], [0.062, 0.276], [0.069, 0.308], [0.075, 0.31], [0.081, 0.362], [0.087, 0.329], [0.094, 0.384], [0.1, 0.384], [0.106, 0.384], [0.113, 0.408], [0.119, 0.409], [0.125, 0.39], [0.131, 0.412], [0.138, 0.434], [0.144, 0.458], [0.15, 0.456], [0.156, 0.46], [0.163, 0.46], [0.169, 0.423], [0.175, 0.449], [0.181, 0.446], [0.188, 0.473], [0.194, 0.492], [0.2, 0.458], [0.206, 0.504], [0.212, 0.5], [0.219, 0.467], [0.225, 0.504], [0.231, 0.507], [0.237, 0.516], [0.244, 0.533], [0.25, 0.532], [0.256, 0.511], [0.263, 0.476], [0.269, 0.469], [0.275, 0.48], [0.281, 0.529], [0.287, 0.522], [0.294, 0.558], [0.3, 0.608], [0.306, 0.579], [0.312, 0.57], [0.319, 0.609], [0.325, 0.576], [0.331, 0.614], [0.338, 0.628], [0.344, 0.676], [0.35, 0.721], [0.356, 0.753], [0.362, 0.765], [0.369, 0.794], [0.375, 0.798], [0.381, 0.824], [0.388, 0.828], [0.394, 0.851], [0.4, 0.862], [0.406, 0.886], [0.412, 0.855], [0.419, 0.855], [0.425, 0.877], [0.431, 0.888], [0.438, 0.91], [0.444, 0.912], [0.45, 0.897], [0.456, 0.902], [0.463, 0.904], [0.469, 0.904], [0.475, 0.897], [0.481, 0.89], [0.487, 0.877], [0.494, 0.868], [0.5, 0.905], [0.506, 0.888], [0.512, 0.888], [0.519, 0.894], [0.525, 0.917], [0.531, 0.907], [0.537, 0.889], [0.544, 0.905], [0.55, 0.893], [0.556, 0.886], [0.562, 0.912], [0.569, 0.926], [0.575, 0.908], [0.581, 0.92], [0.588, 0.914], [0.594, 0.904], [0.6, 0.919], [0.606, 0.921], [0.613, 0.888], [0.619, 0.877], [0.625, 0.895], [0.631, 0.881], [0.637, 0.852], [0.644, 0.838], [0.65, 0.787], [0.656, 0.803], [0.662, 0.803], [0.669, 0.786], [0.675, 0.731], [0.681, 0.796], [0.688, 0.824], [0.694, 0.828], [0.7, 0.753], [0.706, 0.753], [0.713, 0.807], [0.719, 0.869], [0.725, 0.827], [0.731, 0.811], [0.738, 0.817], [0.744, 0.814], [0.75, 0.722], [0.756, 0.697], [0.762, 0.718], [0.769, 0.707], [0.775, 0.74], [0.781, 0.79], [0.787, 0.751], [0.794, 0.73], [0.8, 0.679], [0.806, 0.69], [0.812, 0.69], [0.819, 0.667], [0.825, 0.553], [0.831, 0.52], [0.838, 0.386], [0.844, 0.353], [0.85, 0.472], [0.856, 0.6], [0.863, 0.606], [0.869, 0.73], [0.875, 0.655], [0.881, 0.63], [0.887, 0.499], [0.894, 0.499], [0.9, 0.584], [0.906, 0.584], [0.912, 0.632], [0.919, 0.644], [0.925, 0.644], [0.931, 0.665], [0.938, 0.642], [0.944, 0.642], [0.95, 0.406], [0.956, 0.372], [0.963, 0.408], [0.969, 0.374], [0.975, 0.295], [0.981, 0.116], [0.988, 0.1], [0.994, 0.022], [1.0, 0.005]]}</script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><filter id="duo" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="table" tableValues="0.133 0.949"/><feFuncG type="table" tableValues="0.133 0.914"/><feFuncB type="table" tableValues="0.231 0.894"/></feComponentTransfer></filter></svg>
+<a class="skip" href="#main">Skip to Content</a>
+<canvas class="cloud" aria-hidden="true"></canvas>
+
+<header class="hd">
+  <div class="hd-bar">
+    <a class="brand" href="../index.html" aria-label="Anderson McAlpine, home"><i class="sq" aria-hidden="true"></i><span class="brand-name">Anderson McAlpine</span></a>
+    <p class="hd-note note">Project 03 of 06. Computer vision, robotic bin picking.</p>
+    <nav class="hd-links" aria-label="Main">
+      <a href="../index.html#work">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../resume.html">Resume</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="scene c-scene" data-cloud data-shape="bolt" data-x="0.56" data-y="-0.04" data-s="0.86" data-a="1" aria-labelledby="c-title">
+    <div class="dots rise" style="--d:200ms" aria-hidden="true"></div>
+    <div class="giant rise" data-parallax="0.3" aria-hidden="true"><span>03</span></div>
+    <i class="hair mid rise" style="--d:320ms" aria-hidden="true"></i>
+    <div class="copy">
+      <a class="back rise" href="../index.html#work">All Work</a>
+      <p class="kind rise" style="--d:60ms"><span>03</span><span>Computer vision, robotic bin picking</span><span>2026</span></p>
+      <h1 class="title" id="c-title" style="view-transition-name: t-fastener">Fastener Recognition</h1>
+      <p class="blurb rise" style="--d:160ms">A research pipeline that detects screws, bolts and nuts and fits each with a rotated bounding box, so a gripper can be given both a part&#x27;s position and its long-axis angle. The results so far are on public datasets; running it on a Raspberry Pi with a camera is the next step.</p>
+    </div>
+  </section>
+
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-label="Project details">
+    <div class="wrap">
+      <dl class="c-meta reveal">
+        <div><dt>Model</dt><dd>YOLO11n-OBB</dd></div>
+        <div><dt>Data</dt><dd>MVTec Screws and Bin-Picking</dd></div>
+        <div><dt>Tools</dt><dd>Python, PyTorch, Ultralytics</dd></div>
+        <div><dt>Status</dt><dd>Research baseline; Raspberry Pi 4 B deployment next</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-0">
+    <div class="wrap grid">
+      <h2 id="s-0" class="reveal">Problem</h2>
+      <div class="c-body reveal">
+        <p>Parts in a bin lie at every angle. An upright box around a diagonal bolt also covers empty space and its neighbours, which tells a gripper very little. Oriented bounding boxes turn with each part, so the box itself gives position, size and angle.</p>
+      </div>
+    </div>
+    <figure class="c-fig wrap reveal demo-fig">
+      <div class="demo" data-demo="obb"></div>
+      <figcaption>Turn the bolt and compare how much empty space each kind of box holds.</figcaption>
+    </figure>
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-1">
+    <div class="wrap grid">
+      <h2 id="s-1" class="reveal">Data</h2>
+      <div class="c-body reveal">
+        <p>Four public fastener datasets were audited. Two were usable for whole-part detection and make up the training set: MVTec Screws, whose 384 images carry truly rotated boxes, and Bin-Picking, whose 123 photos of flange bolts and nuts carry axis-aligned boxes. Together they give 507 images and 5,264 boxes.</p>
+        <p>Of the other two, one boxes only the screw head, so it was converted into a separate drive-type set that is not yet trained. The other was set aside because its boxes are mostly empty space. Each source names its parts differently, so every class is mapped by name onto one shared set (screw, bolt, nut), and the mapping is checked against each dataset&#x27;s own class list before conversion.</p>
+      </div>
+    </div>
+
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-2">
+    <div class="wrap grid">
+      <h2 id="s-2" class="reveal">Evaluation</h2>
+      <div class="c-body reveal">
+        <p>Scores are reported per source, not only overall, because the combined score is dominated by the larger MVTec set. On the 72-image test split, mAP50-95 is 0.9713 on MVTec and 0.8873 on Bin-Picking: the model does better on separated parts on a board than on clustered parts, the conditions a robot actually picks from. The Bin-Picking test slice is only 12 images, so that number is noisy.</p>
+        <p>Orientation is measured only where it means something. MVTec is the only source with truly rotated labels, and there the median long-axis error on the test split is 0.56 degrees for screws and 0.83 degrees for bolts. Bin-Picking labels are axis-aligned, so its angle error says nothing about rotation.</p>
+      </div>
+    </div>
+    <div class="c-fig c-side c-tiles wrap reveal">
+      <figure class="tile wide">
+        <span class="duo"><img src="../images/fastener-1.jpg" alt="Screws, bolts and nuts lying at many angles on a wooden board, each enclosed by a labelled box rotated to match the part" loading="lazy"></span>
+        <figcaption>MVTec test image: all 17 parts found, each box turned to match the part. MVTec Screws dataset (Ulrich, Follmann and Neudeck, 2019), CC BY-NC-SA 4.0; cropped, with detection overlay added, and shared under the same licence. Hover for full colour.</figcaption>
+      </figure>
+      <figure class="tile">
+        <span class="duo"><img src="../images/fastener-2.jpg" alt="A cluster of overlapping flange bolts and nuts on a grey surface, each with an upright box and a class label" loading="lazy"></span>
+        <figcaption>Bin-Picking test image: 12 of 13 parts found; the missed nut is marked at right. Boxes are upright because this source&#x27;s labels are. Bin-Picking dataset, Roboflow Universe, CC BY 4.0; cropped, with detection overlay added. Hover for full colour.</figcaption>
+      </figure>
+      <figure class="tile">
+        <span class="duo"><img src="../images/fastener-3.jpg" alt="Scattered flange bolts and nuts on a grey surface, with a red box at top right where a nut is predicted as a bolt" loading="lazy"></span>
+        <figcaption>A failure case from the Bin-Picking test split: one nut labelled as a bolt and one extra box, both drawn with heavy outlines at top right. Bin-Picking dataset, Roboflow Universe, CC BY 4.0; cropped, with detection overlay added. Hover for full colour.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-3">
+    <div class="wrap grid">
+      <h2 id="s-3" class="reveal">Tuning</h2>
+      <div class="c-body reveal">
+        <p>Most Bin-Picking errors were false positives, not misses. A sweep of the confidence threshold and the non-maximum suppression (NMS) overlap limit on the validation split, which holds 174 Bin-Picking objects, raised precision from 0.811 to 0.900 and cut false positives from 35 to 14. Recall fell from 0.960 to 0.931, and F1 rose from 0.879 to 0.915. The confidence threshold does most of the work; stricter NMS adds a little more. Four class errors remain at every setting, so they need data rather than thresholds.</p>
+        <p>These thresholds are tuned on public validation data. Operating thresholds for a real rig will be set on its own camera data.</p>
+      </div>
+    </div>
+    <figure class="c-fig c-side c-chart wrap reveal">
+      <svg aria-label="Two line charts against confidence threshold from 0.25 to 0.70, one line per NMS IoU setting. Precision rises from 0.811 at the default setting to 0.900 at confidence 0.70 with NMS IoU 0.30; recall falls from 0.960 to 0.931" class="chart" viewBox="0 0 660 300" width="660" height="300" role="img" xmlns="http://www.w3.org/2000/svg">
+<path class="s2" d="M16 12h22"/>
+<text class="lg" x="46" y="16">NMS IoU 0.70 (default)</text>
+<path class="s3" d="M213.2 12h22"/>
+<text class="lg" x="243.2" y="16">NMS IoU 0.50</text>
+<path class="s1" d="M344.4 12h22"/>
+<text class="lg" x="374.4" y="16">NMS IoU 0.30 (selected)</text>
+<path class="gr" d="M64.0 236.0H304.0 M64.0 188.5H304.0 M64.0 141.0H304.0 M64.0 93.5H304.0 M64.0 46.0H304.0"/>
+<path class="ax" d="M64.0 42.0V236.0H308.0"/>
+<text class="tk" x="56.0" y="240.0" text-anchor="end">0.76</text>
+<text class="tk" x="56.0" y="192.5" text-anchor="end">0.80</text>
+<text class="tk" x="56.0" y="145.0" text-anchor="end">0.84</text>
+<text class="tk" x="56.0" y="97.5" text-anchor="end">0.88</text>
+<text class="tk" x="56.0" y="50.0" text-anchor="end">0.92</text>
+<text class="tk" x="64.0" y="253.0" text-anchor="middle">0.25</text>
+<text class="tk" x="144.0" y="253.0" text-anchor="middle">0.40</text>
+<text class="tk" x="197.3" y="253.0" text-anchor="middle">0.50</text>
+<text class="tk" x="250.7" y="253.0" text-anchor="middle">0.60</text>
+<text class="tk" x="304.0" y="253.0" text-anchor="middle">0.70</text>
+<text class="lb" x="184.0" y="272.0" text-anchor="middle">Confidence threshold</text>
+<text class="lb" transform="translate(20.0 141.0) rotate(-90)" text-anchor="middle">Precision</text>
+<path class="s2" d="M64.0 175.4 L144.0 137.4 L197.3 127.9 L250.7 97.1 L304.0 75.7"/>
+<path class="s3" d="M64.0 151.7 L144.0 131.5 L197.3 122.0 L250.7 97.1 L304.0 75.7"/>
+<path class="s1" d="M64.0 138.6 L144.0 123.2 L197.3 112.5 L250.7 86.4 L304.0 69.8"/>
+<rect class="pt" x="60.0" y="171.4" width="8" height="8"/>
+<text class="nm" x="70.0" y="195.4" text-anchor="start">0.811</text>
+<rect class="pt" x="300.0" y="65.8" width="8" height="8"/>
+<text class="nm" x="298.0" y="59.8" text-anchor="end">0.900</text>
+<path class="gr" d="M394.0 236.0H634.0 M394.0 188.5H634.0 M394.0 141.0H634.0 M394.0 93.5H634.0 M394.0 46.0H634.0"/>
+<path class="ax" d="M394.0 42.0V236.0H638.0"/>
+<text class="tk" x="386.0" y="240.0" text-anchor="end">0.84</text>
+<text class="tk" x="386.0" y="192.5" text-anchor="end">0.88</text>
+<text class="tk" x="386.0" y="145.0" text-anchor="end">0.92</text>
+<text class="tk" x="386.0" y="97.5" text-anchor="end">0.96</text>
+<text class="tk" x="386.0" y="50.0" text-anchor="end">1.00</text>
+<text class="tk" x="394.0" y="253.0" text-anchor="middle">0.25</text>
+<text class="tk" x="474.0" y="253.0" text-anchor="middle">0.40</text>
+<text class="tk" x="527.3" y="253.0" text-anchor="middle">0.50</text>
+<text class="tk" x="580.7" y="253.0" text-anchor="middle">0.60</text>
+<text class="tk" x="634.0" y="253.0" text-anchor="middle">0.70</text>
+<text class="lb" x="514.0" y="272.0" text-anchor="middle">Confidence threshold</text>
+<text class="lb" transform="translate(350.0 141.0) rotate(-90)" text-anchor="middle">Recall</text>
+<path class="s2" d="M394.0 93.5 L474.0 93.5 L527.3 100.6 L580.7 113.7 L634.0 127.9"/>
+<path class="s3" d="M394.0 93.5 L474.0 93.5 L527.3 100.6 L580.7 113.7 L634.0 127.9"/>
+<path class="s1" d="M394.0 107.8 L474.0 107.8 L527.3 107.8 L580.7 113.7 L634.0 127.9"/>
+<rect class="pt" x="390.0" y="89.5" width="8" height="8"/>
+<text class="nm" x="400.0" y="83.5" text-anchor="start">0.960</text>
+<rect class="pt" x="630.0" y="123.9" width="8" height="8"/>
+<text class="nm" x="628.0" y="147.9" text-anchor="end">0.931</text>
+</svg>
+      <figcaption>Bin-Picking precision and recall on the validation split for each confidence threshold and NMS IoU setting. Both panels span the same range, so their slopes compare directly.</figcaption>
+    </figure>
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-4">
+    <div class="wrap grid">
+      <h2 id="s-4" class="reveal">Engineering</h2>
+      <div class="c-body reveal">
+        <p>Every conversion step is checked: a validation suite covers label format, geometry, class coverage and splits, and every image keeps its source and licence in a manifest. A later review found the custom angle and matching code mixed pixel and normalised coordinates; it was corrected and the diagnostics rerun, and the results on this page come from that corrected evaluation.</p>
+        <p>Regression tests cover the measurement itself: wide, tall and square images, swapped and perpendicular boxes, crowded scenes, class confusion and empty scenes, along with pipeline guards and capture-split checks. They pass locally. A Windows and Linux CI workflow is written but not yet running.</p>
+      </div>
+    </div>
+
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-5">
+    <div class="wrap grid">
+      <h2 id="s-5" class="reveal">Next Steps</h2>
+      <div class="c-body reveal">
+        <p>The detector is a research baseline on public data; no camera rig or live system exists yet. The next steps are to export the model to a Raspberry Pi 4 B, measure its speed on recorded footage, then collect camera data from the rig, held out by session, to retrain and set thresholds.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="c-sec c-next" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="next-h">
+    <div class="wrap">
+      <h2 class="next-label" id="next-h">Next Project</h2>
+      <div class="cards">
+      <article class="card theme-ochre reveal" aria-labelledby="c-gear">
+        <div class="card-panel">
+          <span class="num-o" aria-hidden="true">04</span>
+        </div>
+        <div class="card-body">
+          <p class="card-meta"><span>Machine learning</span><span>2025</span></p>
+          <h3 id="c-gear" style="view-transition-name: t-gear">Gear Fault Classification</h3>
+          <p class="card-sum">Six gear conditions, from healthy to a chipped tooth, classified from two-axis vibration data with five model families.</p>
+          <a class="link stretch" href="../work/gear.html" aria-label="View Project: Gear Fault Classification"><span class="u">View Project</span> <span class="ar" aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft-row">
+    <span>Anderson McAlpine, Toronto</span>
+    <a href="../index.html">Home</a>
+  </div>
+</footer>
+</body>
+</html>

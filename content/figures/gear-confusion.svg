@@ -1,0 +1,61 @@
+<svg class="chart" viewBox="0 0 660 448" width="660" height="448" role="img" xmlns="http://www.w3.org/2000/svg">
+<text class="tk" transform="translate(180.0 86) rotate(-40)">No fault</text>
+<text class="tk" transform="translate(232.0 86) rotate(-40)">Eccentricity</text>
+<text class="tk" transform="translate(284.0 86) rotate(-40)">Missing tooth</text>
+<text class="tk" transform="translate(336.0 86) rotate(-40)">Root crack</text>
+<text class="tk" transform="translate(388.0 86) rotate(-40)">Surface defect</text>
+<text class="tk" transform="translate(440.0 86) rotate(-40)">Chipped tooth</text>
+<text class="nm" x="138" y="126.0" text-anchor="end">No fault</text>
+<rect class="pt" x="151" y="97" width="50" height="50" fill-opacity="0.93"/>
+<text class="ko" x="176.0" y="127.0" text-anchor="middle">20</text>
+<rect class="cell" x="203" y="97" width="50" height="50"/>
+<rect class="cell" x="255" y="97" width="50" height="50"/>
+<rect class="hl" x="307" y="97" width="50" height="50" fill-opacity="0.28"/>
+<text class="nm" x="332.0" y="127.0" text-anchor="middle">1</text>
+<rect class="cell" x="359" y="97" width="50" height="50"/>
+<rect class="hl" x="411" y="97" width="50" height="50" fill-opacity="0.28"/>
+<text class="nm" x="436.0" y="127.0" text-anchor="middle">1</text>
+<text class="nm" x="138" y="178.0" text-anchor="end">Eccentricity</text>
+<rect class="cell" x="151" y="149" width="50" height="50"/>
+<rect class="pt" x="203" y="149" width="50" height="50" fill-opacity="1.00"/>
+<text class="ko" x="228.0" y="179.0" text-anchor="middle">22</text>
+<rect class="cell" x="255" y="149" width="50" height="50"/>
+<rect class="cell" x="307" y="149" width="50" height="50"/>
+<rect class="cell" x="359" y="149" width="50" height="50"/>
+<rect class="cell" x="411" y="149" width="50" height="50"/>
+<text class="nm" x="138" y="230.0" text-anchor="end">Missing tooth</text>
+<rect class="cell" x="151" y="201" width="50" height="50"/>
+<rect class="cell" x="203" y="201" width="50" height="50"/>
+<rect class="pt" x="255" y="201" width="50" height="50" fill-opacity="1.00"/>
+<text class="ko" x="280.0" y="231.0" text-anchor="middle">22</text>
+<rect class="cell" x="307" y="201" width="50" height="50"/>
+<rect class="cell" x="359" y="201" width="50" height="50"/>
+<rect class="cell" x="411" y="201" width="50" height="50"/>
+<text class="nm" x="138" y="282.0" text-anchor="end">Root crack</text>
+<rect class="cell" x="151" y="253" width="50" height="50"/>
+<rect class="cell" x="203" y="253" width="50" height="50"/>
+<rect class="cell" x="255" y="253" width="50" height="50"/>
+<rect class="pt" x="307" y="253" width="50" height="50" fill-opacity="1.00"/>
+<text class="ko" x="332.0" y="283.0" text-anchor="middle">22</text>
+<rect class="cell" x="359" y="253" width="50" height="50"/>
+<rect class="cell" x="411" y="253" width="50" height="50"/>
+<text class="nm" x="138" y="334.0" text-anchor="end">Surface defect</text>
+<rect class="cell" x="151" y="305" width="50" height="50"/>
+<rect class="cell" x="203" y="305" width="50" height="50"/>
+<rect class="hl" x="255" y="305" width="50" height="50" fill-opacity="0.28"/>
+<text class="nm" x="280.0" y="335.0" text-anchor="middle">1</text>
+<rect class="cell" x="307" y="305" width="50" height="50"/>
+<rect class="pt" x="359" y="305" width="50" height="50" fill-opacity="0.97"/>
+<text class="ko" x="384.0" y="335.0" text-anchor="middle">21</text>
+<rect class="cell" x="411" y="305" width="50" height="50"/>
+<text class="nm" x="138" y="386.0" text-anchor="end">Chipped tooth</text>
+<rect class="cell" x="151" y="357" width="50" height="50"/>
+<rect class="cell" x="203" y="357" width="50" height="50"/>
+<rect class="cell" x="255" y="357" width="50" height="50"/>
+<rect class="cell" x="307" y="357" width="50" height="50"/>
+<rect class="cell" x="359" y="357" width="50" height="50"/>
+<rect class="pt" x="411" y="357" width="50" height="50" fill-opacity="1.00"/>
+<text class="ko" x="436.0" y="387.0" text-anchor="middle">22</text>
+<text class="lb" x="306.0" y="434" text-anchor="middle">Predicted condition (test set, 132 windows)</text>
+<text class="lb" transform="translate(18 252.0) rotate(-90)" text-anchor="middle">True condition</text>
+</svg>

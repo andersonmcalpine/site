@@ -1,0 +1,27 @@
+<svg class="chart" viewBox="0 0 660 304" width="660" height="304" role="img" xmlns="http://www.w3.org/2000/svg">
+<path class="gr" d="M64.0 118.0H564.0 M64.0 46.0H564.0"/>
+<path class="ax" d="M64.0 24.0V118.0H568.0"/>
+<text class="tk" x="56.0" y="122.0" text-anchor="end">Low</text>
+<text class="tk" x="56.0" y="50.0" text-anchor="end">High</text>
+<text class="tk" x="64.0" y="135.0" text-anchor="middle">0</text>
+<text class="tk" x="189.0" y="135.0" text-anchor="middle">10</text>
+<text class="tk" x="314.0" y="135.0" text-anchor="middle">20</text>
+<text class="tk" x="439.0" y="135.0" text-anchor="middle">30</text>
+<text class="tk" x="564.0" y="135.0" text-anchor="middle">40</text>
+<text class="lb" transform="translate(20.0 73.0) rotate(-90)" text-anchor="middle">Output</text>
+<path class="s1" d="M64.0 118.0 L76.5 118.0 L76.5 46.0 L81.5 46.0 L81.5 118.0 L297.3 118.0 L297.3 46.0 L302.3 46.0 L302.3 118.0 L518.2 118.0 L518.2 46.0 L523.2 46.0 L523.2 118.0 L564.0 118.0"/>
+<text class="nm" x="64" y="16">Minimum duty: 0.40 ms pulses at 56.6 Hz, duty 2.3 ± 0.32%</text>
+<path class="gr" d="M64.0 258.0H564.0 M64.0 186.0H564.0"/>
+<path class="ax" d="M64.0 164.0V258.0H568.0"/>
+<text class="tk" x="56.0" y="262.0" text-anchor="end">Low</text>
+<text class="tk" x="56.0" y="190.0" text-anchor="end">High</text>
+<text class="tk" x="64.0" y="275.0" text-anchor="middle">0</text>
+<text class="tk" x="189.0" y="275.0" text-anchor="middle">10</text>
+<text class="tk" x="314.0" y="275.0" text-anchor="middle">20</text>
+<text class="tk" x="439.0" y="275.0" text-anchor="middle">30</text>
+<text class="tk" x="564.0" y="275.0" text-anchor="middle">40</text>
+<text class="lb" x="314.0" y="294.0" text-anchor="middle">Time (ms)</text>
+<text class="lb" transform="translate(20.0 213.0) rotate(-90)" text-anchor="middle">Output</text>
+<path class="s1" d="M64.0 258.0 L76.5 258.0 L76.5 186.0 L107.8 186.0 L107.8 258.0 L300.9 258.0 L300.9 186.0 L332.2 186.0 L332.2 258.0 L525.3 258.0 L525.3 186.0 L556.6 186.0 L556.6 258.0 L564.0 258.0"/>
+<text class="nm" x="64" y="156">Maximum duty: 2.50 ms pulses at 55.7 Hz, duty 13.9 ± 0.31%</text>
+</svg>

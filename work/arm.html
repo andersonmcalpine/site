@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" class="tinted theme-dusk">
+<head>
+<!-- Built from content/ by build.py. Edit the content, then run python3 build.py. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>6-DOF Robotic Arm | Anderson McAlpine</title>
+<meta name="description" content="A six-axis robotic arm built by a team of two. My teammate designs the mechanics; I brought up the drive system, six brushless motors flashed, calibrated, tuned and commanded over one CAN bus from an STM32.">
+<meta name="theme-color" content="#8C9AC0">
+<link rel="canonical" href="https://andersonmcalpine.github.io/work/arm.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anderson McAlpine">
+<meta property="og:title" content="6-DOF Robotic Arm | Anderson McAlpine">
+<meta property="og:description" content="A six-axis robotic arm built by a team of two. My teammate designs the mechanics; I brought up the drive system, six brushless motors flashed, calibrated, tuned and commanded over one CAN bus from an STM32.">
+<meta property="og:url" content="https://andersonmcalpine.github.io/work/arm.html">
+<meta property="og:image" content="https://andersonmcalpine.github.io/images/og/arm.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=2e69f2cb">
+<link rel="stylesheet" href="../assets/nav.css?v=917d57b8">
+<link rel="stylesheet" href="../assets/pages.css?v=75e72bad">
+<link rel="stylesheet" href="../assets/demos.css?v=592c1fa5">
+<script src="../assets/cloud.js?v=2937656a" defer></script>
+<script src="../assets/site.js?v=8ba3c498" defer></script>
+<script src="../assets/nav.js?v=1912d596" defer></script>
+<script src="../assets/demos.js?v=9a4acbda" defer></script>
+<script type="application/json" id="site-data">{"projects": [{"id": "arm", "title": "6-DOF Robotic Arm", "num": "01"}, {"id": "sorter", "title": "Autonomous Sorting Robot", "num": "02"}, {"id": "fastener", "title": "Fastener Recognition", "num": "03"}, {"id": "gear", "title": "Gear Fault Classification", "num": "04"}, {"id": "nba", "title": "NBA Live Win Probability", "num": "05"}, {"id": "servo", "title": "Servo Driver", "num": "06"}], "sections": [{"id": "top", "label": "Home"}, {"id": "work", "label": "Work"}, {"id": "about", "label": "About", "page": "about.html"}, {"id": "experience", "label": "Experience and Education"}, {"id": "skills", "label": "Skills"}, {"id": "contact", "label": "Contact"}, {"id": "resume", "label": "Resume", "page": "resume.html"}], "email": "anderson.mcalpine@gmail.com", "linkedin": "https://www.linkedin.com/in/anderson-mcalpine-620898380", "resume": "resume.pdf", "curve": [[0.0, 0.253], [0.006, 0.253], [0.013, 0.268], [0.019, 0.269], [0.025, 0.3], [0.031, 0.272], [0.037, 0.272], [0.044, 0.273], [0.05, 0.275], [0.056, 0.261], [0.062, 0.276], [0.069, 0.308], [0.075, 0.31], [0.081, 0.362], [0.087, 0.329], [0.094, 0.384], [0.1, 0.384], [0.106, 0.384], [0.113, 0.408], [0.119, 0.409], [0.125, 0.39], [0.131, 0.412], [0.138, 0.434], [0.144, 0.458], [0.15, 0.456], [0.156, 0.46], [0.163, 0.46], [0.169, 0.423], [0.175, 0.449], [0.181, 0.446], [0.188, 0.473], [0.194, 0.492], [0.2, 0.458], [0.206, 0.504], [0.212, 0.5], [0.219, 0.467], [0.225, 0.504], [0.231, 0.507], [0.237, 0.516], [0.244, 0.533], [0.25, 0.532], [0.256, 0.511], [0.263, 0.476], [0.269, 0.469], [0.275, 0.48], [0.281, 0.529], [0.287, 0.522], [0.294, 0.558], [0.3, 0.608], [0.306, 0.579], [0.312, 0.57], [0.319, 0.609], [0.325, 0.576], [0.331, 0.614], [0.338, 0.628], [0.344, 0.676], [0.35, 0.721], [0.356, 0.753], [0.362, 0.765], [0.369, 0.794], [0.375, 0.798], [0.381, 0.824], [0.388, 0.828], [0.394, 0.851], [0.4, 0.862], [0.406, 0.886], [0.412, 0.855], [0.419, 0.855], [0.425, 0.877], [0.431, 0.888], [0.438, 0.91], [0.444, 0.912], [0.45, 0.897], [0.456, 0.902], [0.463, 0.904], [0.469, 0.904], [0.475, 0.897], [0.481, 0.89], [0.487, 0.877], [0.494, 0.868], [0.5, 0.905], [0.506, 0.888], [0.512, 0.888], [0.519, 0.894], [0.525, 0.917], [0.531, 0.907], [0.537, 0.889], [0.544, 0.905], [0.55, 0.893], [0.556, 0.886], [0.562, 0.912], [0.569, 0.926], [0.575, 0.908], [0.581, 0.92], [0.588, 0.914], [0.594, 0.904], [0.6, 0.919], [0.606, 0.921], [0.613, 0.888], [0.619, 0.877], [0.625, 0.895], [0.631, 0.881], [0.637, 0.852], [0.644, 0.838], [0.65, 0.787], [0.656, 0.803], [0.662, 0.803], [0.669, 0.786], [0.675, 0.731], [0.681, 0.796], [0.688, 0.824], [0.694, 0.828], [0.7, 0.753], [0.706, 0.753], [0.713, 0.807], [0.719, 0.869], [0.725, 0.827], [0.731, 0.811], [0.738, 0.817], [0.744, 0.814], [0.75, 0.722], [0.756, 0.697], [0.762, 0.718], [0.769, 0.707], [0.775, 0.74], [0.781, 0.79], [0.787, 0.751], [0.794, 0.73], [0.8, 0.679], [0.806, 0.69], [0.812, 0.69], [0.819, 0.667], [0.825, 0.553], [0.831, 0.52], [0.838, 0.386], [0.844, 0.353], [0.85, 0.472], [0.856, 0.6], [0.863, 0.606], [0.869, 0.73], [0.875, 0.655], [0.881, 0.63], [0.887, 0.499], [0.894, 0.499], [0.9, 0.584], [0.906, 0.584], [0.912, 0.632], [0.919, 0.644], [0.925, 0.644], [0.931, 0.665], [0.938, 0.642], [0.944, 0.642], [0.95, 0.406], [0.956, 0.372], [0.963, 0.408], [0.969, 0.374], [0.975, 0.295], [0.981, 0.116], [0.988, 0.1], [0.994, 0.022], [1.0, 0.005]]}</script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false"><filter id="duo" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncR type="table" tableValues="0.133 0.949"/><feFuncG type="table" tableValues="0.133 0.914"/><feFuncB type="table" tableValues="0.231 0.894"/></feComponentTransfer></filter></svg>
+<a class="skip" href="#main">Skip to Content</a>
+<canvas class="cloud" aria-hidden="true"></canvas>
+
+<header class="hd">
+  <div class="hd-bar">
+    <a class="brand" href="../index.html" aria-label="Anderson McAlpine, home"><i class="sq" aria-hidden="true"></i><span class="brand-name">Anderson McAlpine</span></a>
+    <p class="hd-note note">Project 01 of 06. Robotics, two-person project.</p>
+    <nav class="hd-links" aria-label="Main">
+      <a href="../index.html#work">Work</a>
+      <a href="../about.html">About</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+      <a href="../resume.html">Resume</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="scene c-scene" data-cloud data-shape="arm" data-x="0.56" data-y="-0.04" data-s="0.86" data-a="1" aria-labelledby="c-title">
+    <div class="dots rise" style="--d:200ms" aria-hidden="true"></div>
+    <div class="giant rise" data-parallax="0.3" aria-hidden="true"><span>01</span></div>
+    <i class="hair mid rise" style="--d:320ms" aria-hidden="true"></i>
+    <div class="copy">
+      <a class="back rise" href="../index.html#work">All Work</a>
+      <p class="kind rise" style="--d:60ms"><span>01</span><span>Robotics, two-person project</span><span>Ongoing</span></p>
+      <h1 class="title" id="c-title" style="view-transition-name: t-arm">6-DOF Robotic Arm</h1>
+      <p class="blurb rise" style="--d:160ms">A six-axis robotic arm built with one teammate. While the mechanical design is finished, I have brought up all six joint drives, from firmware and motor calibration to tuning and a CAN bus run from an STM32, with laptop tools to test every motor.</p>
+    </div>
+  </section>
+
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-label="Project details">
+    <div class="wrap">
+      <dl class="c-meta reveal">
+        <div><dt>Status</dt><dd>All six drives wired and running on CAN; arm in its third design revision</dd></div>
+        <div><dt>My part</dt><dd>Drive bring-up, CAN bus, STM32 firmware, test tools, drive simulator</dd></div>
+        <div><dt>Motors</dt><dd>Three REV NEO and three NEO 550, with hall sensors</dd></div>
+        <div><dt>Hardware</dt><dd>ODESC v4.2 drives, STM32 Nucleo-F446RE, TJA1050 CAN transceiver</dd></div>
+        <div><dt>Gearbox</dt><dd>Compound planetary, 55:1, designed by my teammate</dd></div>
+        <div><dt>Tools</dt><dd>C, Python, odrivetool</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-0">
+    <div class="wrap grid">
+      <h2 id="s-0" class="reveal">Drive Bring-Up</h2>
+      <div class="c-body reveal">
+        <p>Each joint is a brushless motor on its own ODESC v4.2 drive, with REV NEO motors on the three large joints and NEO 550s on the wrist. The drives shipped with unreleased factory firmware, so I backed up each board&#x27;s complete flash before installing the official ODrive 0.5.6 firmware through the STM32&#x27;s USB bootloader, checking every write byte for byte.</p>
+        <p>Each motor was then calibrated on its own drive: phase resistance and inductance measured, hall-sensor polarity and offset found, and a current limit set for its type, 50 A for the NEOs and 30 A for the NEO 550s. The measurements agree within each type, 23.3 to 24.0 mΩ per phase for the NEOs and 43.6 to 44.5 mΩ for the NEO 550s.</p>
+        <p>Every drive runs cascaded position and velocity loops. I tuned the position gain, velocity gain and velocity integrator of each joint in steps, so the six settle on their own values, and every move follows a trapezoidal profile limited to 2 turns/s and 5 turns/s².</p>
+      </div>
+    </div>
+    <figure class="c-fig c-side c-chart wrap reveal">
+      <svg aria-label="Table of the six drives with node, motor, current limit, measured phase resistance and inductance, and the tuned position, velocity and integrator gains" class="chart" viewBox="0 0 660 234" width="660" height="234" role="img" xmlns="http://www.w3.org/2000/svg">
+<text class="tk" x="20" y="24" text-anchor="start">Node</text>
+<text class="tk" x="66" y="24" text-anchor="start">Motor</text>
+<text class="tk" x="238" y="24" text-anchor="end">Current limit</text>
+<text class="tk" x="328" y="24" text-anchor="end">Resistance</text>
+<text class="tk" x="414" y="24" text-anchor="end">Inductance</text>
+<text class="tk" x="490" y="24" text-anchor="end">Pos gain</text>
+<text class="tk" x="566" y="24" text-anchor="end">Vel gain</text>
+<text class="tk" x="644" y="24" text-anchor="end">Integrator</text>
+<path class="ax" d="M16 34H644"/>
+<text class="nm" x="20" y="55" text-anchor="start">1</text>
+<text class="nm" x="66" y="55" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="55" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="55" text-anchor="end">23.9 mΩ</text>
+<text class="nm" x="414" y="55" text-anchor="end">6.13 µH</text>
+<text class="nm" x="490" y="55" text-anchor="end">2.20</text>
+<text class="nm" x="566" y="55" text-anchor="end">0.0500</text>
+<text class="nm" x="644" y="55" text-anchor="end">0.020</text>
+<path class="gr" d="M16 66H644"/>
+<text class="nm" x="20" y="87" text-anchor="start">2</text>
+<text class="nm" x="66" y="87" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="87" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="87" text-anchor="end">24.0 mΩ</text>
+<text class="nm" x="414" y="87" text-anchor="end">5.96 µH</text>
+<text class="nm" x="490" y="87" text-anchor="end">8.16</text>
+<text class="nm" x="566" y="87" text-anchor="end">0.0296</text>
+<text class="nm" x="644" y="87" text-anchor="end">0.005</text>
+<path class="gr" d="M16 98H644"/>
+<text class="nm" x="20" y="119" text-anchor="start">3</text>
+<text class="nm" x="66" y="119" text-anchor="start">REV NEO</text>
+<text class="nm" x="238" y="119" text-anchor="end">50 A</text>
+<text class="nm" x="328" y="119" text-anchor="end">23.3 mΩ</text>
+<text class="nm" x="414" y="119" text-anchor="end">7.80 µH</text>
+<text class="nm" x="490" y="119" text-anchor="end">8.16</text>
+<text class="nm" x="566" y="119" text-anchor="end">0.0385</text>
+<text class="nm" x="644" y="119" text-anchor="end">0.020</text>
+<path class="gr" d="M16 130H644"/>
+<text class="nm" x="20" y="151" text-anchor="start">4</text>
+<text class="nm" x="66" y="151" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="151" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="151" text-anchor="end">44.5 mΩ</text>
+<text class="nm" x="414" y="151" text-anchor="end">4.31 µH</text>
+<text class="nm" x="490" y="151" text-anchor="end">6.28</text>
+<text class="nm" x="566" y="151" text-anchor="end">0.0186</text>
+<text class="nm" x="644" y="151" text-anchor="end">0.040</text>
+<path class="gr" d="M16 162H644"/>
+<text class="nm" x="20" y="183" text-anchor="start">5</text>
+<text class="nm" x="66" y="183" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="183" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="183" text-anchor="end">43.6 mΩ</text>
+<text class="nm" x="414" y="183" text-anchor="end">5.51 µH</text>
+<text class="nm" x="490" y="183" text-anchor="end">4.83</text>
+<text class="nm" x="566" y="183" text-anchor="end">0.0143</text>
+<text class="nm" x="644" y="183" text-anchor="end">0.010</text>
+<path class="gr" d="M16 194H644"/>
+<text class="nm" x="20" y="215" text-anchor="start">6</text>
+<text class="nm" x="66" y="215" text-anchor="start">NEO 550</text>
+<text class="nm" x="238" y="215" text-anchor="end">30 A</text>
+<text class="nm" x="328" y="215" text-anchor="end">43.9 mΩ</text>
+<text class="nm" x="414" y="215" text-anchor="end">5.51 µH</text>
+<text class="nm" x="490" y="215" text-anchor="end">4.83</text>
+<text class="nm" x="566" y="215" text-anchor="end">0.0143</text>
+<text class="nm" x="644" y="215" text-anchor="end">0.010</text>
+<path class="gr" d="M16 226H644"/>
+</svg>
+      <figcaption>The six drives as configured, read from their saved backups. Gains are in ODrive units: position (turn/s)/turn, velocity Nm/(turn/s), integrator Nm/turn.</figcaption>
+    </figure>
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-1">
+    <div class="wrap grid">
+      <h2 id="s-1" class="reveal">CAN Bus</h2>
+      <div class="c-body reveal">
+        <p>The six drives share one CAN bus at 500 kbit/s as nodes 1 to 6. An STM32 Nucleo-F446RE joins it through a TJA1050 transceiver and turns a simple serial protocol from the laptop into ODrive&#x27;s CAN messages: a line such as P 3 1.5 sends drive 3 to 1.5 turns, and the board reports every drive&#x27;s state, errors, position, velocity and current.</p>
+        <p>Bringing the bus up turned up one fault: every drive&#x27;s unused second axis also answered as node 1, which broke the first drive&#x27;s tests. Moving those axes to a spare node cleared it.</p>
+        <p>Two Python tools run the bus from the laptop. One checks each drive&#x27;s heartbeat and encoder rates, errors and telemetry, and can nudge each motor and back; the other moves any motor to a typed position. With them, all six motors have been read and driven over CAN.</p>
+      </div>
+    </div>
+
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-2">
+    <div class="wrap grid">
+      <h2 id="s-2" class="reveal">Firmware</h2>
+      <div class="c-body reveal">
+        <p>The bridge firmware is written in C on the STM32 HAL and built with a Makefile. Its newer version runs the serial link at 460,800 baud, reads it without blocking, queues outgoing CAN frames and streams telemetry from all six drives at up to 200 Hz. It is tested against a stand-in for the board and is next to be flashed.</p>
+      </div>
+    </div>
+
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-3">
+    <div class="wrap grid">
+      <h2 id="s-3" class="reveal">Simulation</h2>
+      <div class="c-body reveal">
+        <p>A Python simulator runs the exact command stream the hardware receives and models the drives&#x27; own trajectory planner, so every motion can be checked and replayed before it reaches a motor. It takes its drive settings straight from the drive backups and is covered by 33 tests. Its geometry and gear ratios are placeholders until the CAD is final.</p>
+      </div>
+    </div>
+
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-4">
+    <div class="wrap grid">
+      <h2 id="s-4" class="reveal">Gearbox</h2>
+      <div class="c-body reveal">
+        <p>Each joint will drive through a compound planetary gearbox, designed by my teammate in Fusion 360. Five stepped planets run through two layers. In the first, a 30-tooth sun on the motor drives the planets&#x27; 25-tooth lower half around an 80-tooth ring that is held still. In the second, the planets&#x27; upper half, also 25 teeth, meshes with a 75-tooth ring that carries the output.</p>
+        <p>The two rings differ by five teeth, so each turn of the planets around the centre moves the output ring back by only a fifteenth of a turn. Together with the first stage, the motor turns 55 times for each turn of the output, in the opposite direction, from a gear stack about 100 mm across and 20 mm tall.</p>
+      </div>
+    </div>
+    <figure class="c-fig wrap reveal demo-fig">
+      <div class="demo" data-demo="gearbox"></div>
+      <figcaption>Play, or drag the slider, to turn the motor and watch both layers. The output ring, marked in colour, moves once for every 55 turns of the sun.</figcaption>
+    </figure>
+  </section>
+  <section class="c-sec" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="s-5">
+    <div class="wrap grid">
+      <h2 id="s-5" class="reveal">Next Steps</h2>
+      <div class="c-body reveal">
+        <p>Once the arm is printed, I will program the STM32 and a Raspberry Pi to run it, and move the simulator to ROS 2. The Raspberry Pi 4 and its HQ camera are already set up and streaming 1080p video for the vision side.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="c-sec c-next" data-cloud data-shape="dust" data-x="0" data-y="0" data-s="1.15" data-a="0.3" aria-labelledby="next-h">
+    <div class="wrap">
+      <h2 class="next-label" id="next-h">Next Project</h2>
+      <div class="cards">
+      <article class="card theme-rose reveal" aria-labelledby="c-sorter">
+        <div class="card-panel">
+          <span class="num-o" aria-hidden="true">02</span>
+        </div>
+        <div class="card-body">
+          <p class="card-meta"><span>Robotics</span><span>2026</span></p>
+          <h3 id="c-sorter" style="view-transition-name: t-sorter">Autonomous Sorting Robot</h3>
+          <p class="card-sum">A fully autonomous robot that sweeps erasers off the floor, sorts them by colour on a printed conveyor and carries the target colour back to a base station, built by a team of four for $48.77.</p>
+          <a class="link stretch" href="../work/sorter.html" aria-label="View Project: Autonomous Sorting Robot"><span class="u">View Project</span> <span class="ar" aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft-row">
+    <span>Anderson McAlpine, Toronto</span>
+    <a href="../index.html">Home</a>
+  </div>
+</footer>
+</body>
+</html>
