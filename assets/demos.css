@@ -72,6 +72,12 @@
 @media (max-width: 599px) {
   .demo-bar { column-gap: 24px; }
   .demo-seg button { padding: 0 12px; }
+  /* One readout per line, label left and figure right, so a longer value never reflows the others. */
+  .demo-read { flex-direction: column; align-items: stretch; gap: 2px; }
+  .demo-stat { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; white-space: normal; }
+  .demo-stat .k:empty { display: none; }
+  .demo-stat b { min-width: 0; margin-left: 0; }
+  .demo-note { margin-top: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .demo-seg button { transition: none; }
