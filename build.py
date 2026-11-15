@@ -405,6 +405,7 @@ def home(site, projects, about, resume):
       <div class="actions">
         <a class="btn" href="{esc(site["resume"])}" download>Download Resume</a>
         <a class="btn alt" href="#contact">Contact</a>
+        <a class="btn alt" href="{esc(site["linkedin"])}">LinkedIn</a>
       </div>
     </div>
     <div class="field dark cycle" data-shape="{esc(first["shape"])}" data-cycle="{esc(json.dumps(cycle, ensure_ascii=False))}">{fallback}
